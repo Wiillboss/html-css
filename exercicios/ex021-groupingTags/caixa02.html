@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: arial,Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(101, 101, 101);
+            padding: 3px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.496);
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        article{
+            background-color: rgb(165, 165, 165);
+            padding: 5px;
+        }
+        article > aside{
+            background-color:lightgrey;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+       <header>
+           <h1>Meu site</h1>
+            <nav>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </nav>
+       </header>
+       <main>
+            <section id="assuntos">
+                <p>Esportes Politica Tecnologia.</p>
+            </section>
+
+            <section id="noticias">
+                <article>
+                    <p>
+                        <h2>Noticia sobre o Brasil.</h2>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est iure qui vitae, eius rem, voluptas asperiores mollitia, numquam illum officiis quam expedita consequuntur dicta. Doloremque soluta iste ipsam quo consequuntur.
+                    </p>
+                    <aside>
+                        <p>Artigo escrito por Willian Santos</p>
+                    </aside>
+                </article>
+                
+                <article>
+
+                </article>
+            </section>
+
+
+       </main>
+       <footer>
+            <p>Desenvolvido por Willian dos Santos</p>
+       </footer>
+    
+</body>
+</html>
