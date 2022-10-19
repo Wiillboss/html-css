@@ -67,7 +67,7 @@ section{
     line-height: 2em;
     font-family: var(--fonte3);
     /* Abaixo foi feita uma configuração onde o tamanho da font se adapta 5% a LARGURA viewport (Vw) da tela*/
-    font-size: 4.5vw;
+    font-size: 3vw;
 }
 
 /* Criando espaço para baxio nos PARAGRAFOS dentro das SECTION */
@@ -87,6 +87,10 @@ section.normal{
 section.imagem{
     background-color: rgb(51, 51, 51);
     color: white;
+    /*Abaixo foi feito uma sombra para dentro da caixa  */
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.386);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Ajustando cor de um fundo e largura para todo PARAGRAFO da classe IMAGEM dentro de toda SECTION */
@@ -100,14 +104,11 @@ section.imagem > p{
 section#img01{
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
-    background-size: cover;
-
 }
 
 section#img02{
     background-image: url(../imagens/background002.jpg);
     background-position: right center;
-    background-size: cover;
 }
 
 footer{
