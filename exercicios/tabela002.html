@@ -11,17 +11,48 @@
 
         }
         table{
+            /* Abaixo foi feita uma configuração para juntar as celulas da tabela que antes ficavam separadas */
+            border-collapse: collapse;
             width: 500px;
+            position: relative; 
         }
         th, td{
             border: 1px solid black;
             padding: 10px;
         }
-
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         thead, tfoot{
             background-color: gray;
             color: white;
         }
+        /* Abaixo foi feito uma configuração onde o titulo das colunas acompanham até finalizar a tabela, lembrando que para essa configuração é necessário deixar o posicionamento da tabela (TABLE) como RELATIVE. */
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
+        /* Para deixar zebrado a tabela na cor de sua preferência
+            o numero posterior ao N quer dizer de quantas em quantas casas a celula será colorida
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }    
+        */
+
+        /* Prefernencialmente é melhor usar o ODD (impar) e EVEN(par)
+            Dentro delas é possível deixar negrito, sublinhado entre outras configurações */
+        tbody > tr:nth-child(odd){
+            background-color: aqua;
+        }
+        tbody > tr:nth-child(even){
+            background-color: cornsilk;
+        }
+            
+        
         td.num{
             text-align: right;
         }
@@ -32,18 +63,22 @@
 
     <!-- ANATOMIA PARA TABELAS
         TABLE
+            CAPTION (Legenda da Tabela)
             THEAD (cabeçario)
-                TR(linhas), TD(DADOS - colunas), TH(Titulo)
+                TR(linhas), TD(DADOS - colunas), TH(Titulo das colunas)
             TBODY (corpo)
                 TR, TD, TH
             TFOOT (pé)
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas.</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <!-- É possível fazer configurações pontuais dentro da tag 
+                    <th scope="col"  style="width: 50px;">População</th> -->
             </tr>
         </thead>
         <tbody>
@@ -158,10 +193,27 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes.</th>
+                <th scope="row">Total de habitantes.</th>
                 <td class="num"><strong>247 277 238</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi inventore atque illo, aperiam aliquam optio. Laborum a assumenda beatae asperiores nam perspiciatis quod voluptatum quidem, aperiam dignissimos harum consectetur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita voluptas esse et, error ipsa tempora tenetur iste ut odio modi recusandae laudantium, sit obcaecati dolores provident quisquam sapiente magnam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere voluptas iure, eveniet nam deleniti id nesciunt beatae! Odit eveniet tempore voluptatibus debitis magni assumenda dolorum unde cupiditate laboriosam consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem magni esse labore perferendis exercitationem necessitatibus doloremque iusto, totam quis quisquam ex, aut alias natus corrupti earum facilis neque sed? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vitae molestias tempora totam, enim magni suscipit optio, voluptates, eos consequuntur perspiciatis numquam inventore ut laudantium in. Molestias repellat ipsam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in earum aliquid, repudiandae voluptatibus, quia provident dolores fugit iure atque delectus minima perspiciatis eaque. Nemo sit autem odio itaque fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic laboriosam mollitia optio laudantium aperiam accusantium quae? Repellendus, nemo totam! Quasi corporis dolorum aut libero. Beatae corporis aperiam quas pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus atque in, deserunt assumenda architecto et veritatis alias, dolorum placeat corrupti. Qui sit accusamus corporis nemo sunt minima placeat explicabo.
+    </p>
 </body>
 </html>
