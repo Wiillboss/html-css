@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando cor a uma coluna inteira</title>
+    <style>
+        tr, td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption{
+            font-size: 5em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        col.cnome{
+            background-color: gray;
+        }
+
+        col.cgrupo{
+            background-color: yellowgreen;
+        }
+        .verde{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de cores em colunas inteiras.</h1>
+
+    <table>
+        <!-- ANATOMIA PARA TABELA
+        MESA
+            LEGENDA (Legenda da Tabela)
+            THEAD (cabeçario)
+                TR(linhas), TD(DADOS - vozes - células), TH(Título das vozes)
+            TBODY (corpo)
+                TR, TD, TH
+            TFOOT (pé)
+                TR, TD, TH
+        -->
+        <caption>Cadastro</caption>
+        <thead>
+            <!--
+                Esse exercício tem o intuito de de colorir ou configurar uma coluna inteira, visto que fazer uma configuração com CLASS em todas as celulas seria inviavel
+                    É possível fazer a mesclagem (span="") de configurações, observe os exemplos abaixo e seu configuração no CSS
+                        Foram dispostas 3 tipos de configurações.
+            -->
+            <colgroup>
+             <!-- 
+                <col class="cnome">
+                <col class="csexo">
+                <col class="cidade">
+                <col class="cprof">
+             -->    
+                <col class="cnome">
+                <col class="cgrupo" span="2">
+                <col class="verde">
+                   
+            </colgroup>
+
+            <tr>
+                <th scope="col" >Nome</th>
+                <th scope="col" >Sexo</th>
+                <th scope="col" >Idade</th>
+                <th scope="col" >Profissão</th>
+            </tr>
+            <tr>
+                <td>Elisi Matsunaga</td>
+                <td>Feminino</td>
+                <td>33</td>
+                <td>Motorista de Aplicativo</td>
+            </tr>
+            <tr>
+                <td>Zlatan Ibrahimovic</td>
+                <td>Masculino</td>
+                <td>36</td>
+                <td>Jogador de Futebol</td>
+            </tr>
+            <tr>
+                <td>Maria Bonita</td>
+                <td>Feminino</td>
+                <td>36</td>
+                <td>Falecida</td>
+            </tr>
+            <tr>
+                <td>Bruno Mezenga</td>
+                <td>Masculino</td>
+                <td>57</td>
+                <td>Fazendeiro</td>
+            </tr>
+            <tr>
+                <td>Carminha da novela</td>
+                <td>Feminino</td>
+                <td>40</td>
+                <td>Presidiária</td>
+            </tr>
+            <tr>
+                <td>Jef Dhamer</td>
+                <td>Masculino</td>
+                <td>27</td>
+                <td>Acolhedor, X9, Somelier de especiarias de Carnes</td>
+            </tr>
+            <tr>
+                <td>Suzane Von R.</td>
+                <td>Feminino</td>
+                <td>39</td>
+                <td>Melhor Filha do Mundo</td>
+            </tr>
+            <tr>
+                <td>Rafael Barbosa</td>
+                <td>Indefinido</td>
+                <td>28</td>
+                <td>Somelier de SACO, Parmalat, Marmita de bombeiro.</td>
+            </tr>
+            <tr>
+                <td>Marilucio Caires</td>
+                <td>Masculino</td>
+                <td>37</td>
+                <td>Capoerista, Dador de Atestado, Chegado do Secretário.</td>
+            </tr>
+            
+        </thead>
+    </table>
+</body>
+</html>
