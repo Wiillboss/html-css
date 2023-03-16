@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+
+    <style>
+
+        iframe{
+            width: 400px;
+            height: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <!-- Por padrão, o tamanho de um iframe é de 300x150, tabém é possível alterar seu tamanho dentro da tag iframe usando HEIGHT="" como no    exemplo do ifrema do curso em video (exemplo 1).
+        No exemplo do iframe do github foi adicionado tanto uma altura (HEIGHT) como uma largura (WIDTH) - (exemplo 2).
+            OBS: Caso faça um CSS dentro do HEAD e outro dentro do BODY na TAG do iframe, o que prevalece é sempre o que está dentro da tag dentro do BODY, caso não exista nem umas das duas anteriormente, o que prevalece é a configuração de 300x150.
+            Existe o paranmetro SCOOLLING que é responsável por deixar a uma barra de rolagem no iframe e suas opção são AUTO, YES e NO.
+          -->
+<hr> 
+<h1>Exemplo 1</h1>   
+        <p>
+        Acessando o site do 
+
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" >
+            
+        </iframe>
+
+        para aprender a programar.
+    </p>
+<hr>
+<h1>Exemplo 2</h1>
+    <p>
+
+        O site do 
+
+        <iframe src="https://www.google.com.br" frameborder="0">
+            <a href="https://www.google.com.br" target="_blank"></a>
+            Seu navegador não é compatível.
+        </iframe>
+
+        também é muito legal, pena que não funcione dentro do iframe.
+    </p>
+<hr>
+<h1>Exemplo 3</h1>
+    <p>
+
+        O repositório do Guanabara
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500" width="500"></iframe>
+
+        também é bem legal!
+
+    </p>
+</body>
+</html>
