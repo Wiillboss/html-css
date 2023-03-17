@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela{
+            width: 50vw;
+            height: 250px;
+            border: 2px solid black;
+        }
+        iframe{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faca uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt quidem ipsum sapiente ad sit laudantium aspernatur tenetur, est dolor animi a inventore commodi natus dolorem nulla saepe reiciendis molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia dolor perferendis, unde vero ipsa minus quo aliquam autem commodi animi pariatur rerum distinctio est saepe aut sit. A, maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ad laboriosam! Ea modi, consectetur delectus repellat debitis reprehenderit harum fuga illo doloremque maiores expedita praesentium quod tenetur a, minus eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam ex quia in tempore libero, alias quasi corrupti! In aperiam voluptatum recusandae molestiae, tempore commodi nesciunt, error a, porro odio quae.</p>
+
+
+    <ul>
+
+        <li> <a href="paginasParaTestes/pagTesteCobaia001.html" target="iframeDaPag">Primeira página</a></li>
+        <li> <a href="paginasParaTestes/pagTesteCobaia002.html" target="iframeDaPag">Segunda página</a></li>
+        <li> <a href="paginasParaTestes/pagTesteCobaia003.html" target="iframeDaPag">Terceira página</a></li>
+
+    </ul>    
+    <!-- Nesta aula foi ensinado como alterar conteúdo dentro do mesmo iframe, neste exmplo foi criado uma lista com 3 sites (dentro da lista "UL") onde ao clicar no site, o mesmo iria aparecer dentro do iframe, para consegue é necessário criar um NAME dentro do iframe, em seguinda dentro da lista onde estão os site, basta usar o TARGET e dentro dele usar o NAME que foi criando dentro do iframe, no nosso exemplo o NAME criado foi "iframeDaPag".-->
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt quidem ipsum sapiente ad sit laudantium aspernatur tenetur, est dolor animi a inventore commodi natus dolorem nulla saepe reiciendis molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia dolor perferendis, unde vero ipsa minus quo aliquam autem commodi animi pariatur rerum distinctio est saepe aut sit. A, maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ad laboriosam! Ea modi, consectetur delectus repellat debitis reprehenderit harum fuga illo doloremque maiores expedita praesentium quod tenetur a, minus eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam ex quia in tempore libero, alias quasi corrupti! In aperiam voluptatum recusandae molestiae, tempore commodi nesciunt, error a, porro odio quae.</p>
+
+    <iframe id="tela" name="iframeDaPag" src="" frameborder="1">
+        <p>Infelismente seu navegador não é compatível com isso!</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt quidem ipsum sapiente ad sit laudantium aspernatur tenetur, est dolor animi a inventore commodi natus dolorem nulla saepe reiciendis molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia dolor perferendis, unde vero ipsa minus quo aliquam autem commodi animi pariatur rerum distinctio est saepe aut sit. A, maiores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ad laboriosam! Ea modi, consectetur delectus repellat debitis reprehenderit harum fuga illo doloremque maiores expedita praesentium quod tenetur a, minus eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam ex quia in tempore libero, alias quasi corrupti! In aperiam voluptatum recusandae molestiae, tempore commodi nesciunt, error a, porro odio quae.</p>
+</body>
+</html>
