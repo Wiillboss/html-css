@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            display: block;
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Menu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate commodi aspernatur ipsa enim libero illum consequuntur labore impedit dicta fuga? Id consequuntur ea doloremque blanditiis, voluptate molestiae odio officia sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error illo nam reiciendis distinctio quo dolorum natus delectus repellendus! Fuga temporibus libero itaque doloremque ullam quae neque enim corporis porro esse? </p>
+    <!-- Nesta aula foi ensinado a bloquear ações de captura de informações de sites dentro dos iframes, para o bloqueio é usado                SANDBOX="SANDBOX" com essa ação mesmo que alguem preencha os dados e tente enviar, os dados não são enviados, mas caso queria deixar que os dados da mesma origem use o "allow-same-origin", para permitir formulários uso o "allow-forms" e para permitir script use o "allow-scripts"
+            Para que o site não capture informações do usuário é usado o referrerpolicy="no-referrer".
+             -->
+    <iframe src="pag004.html" frameborder="1" width="350" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        <p>Seu navegador não é compatível com isso...</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate commodi aspernatur ipsa enim libero illum consequuntur labore impedit dicta fuga? Id consequuntur ea doloremque blanditiis, voluptate molestiae odio officia sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error illo nam reiciendis distinctio quo dolorum natus delectus repellendus! Fuga temporibus libero itaque doloremque ullam quae neque enim corporis porro esse? </p>
+</body>
+</html>
