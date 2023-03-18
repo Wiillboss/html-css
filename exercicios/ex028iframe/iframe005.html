@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        /* 
-        iframe#segundo{
-            background-color: blue;
-        } */
-
-    </style>
+    <title>Acidionando conteúdos</title>
 </head>
 <body>
-    <h1>Minha página</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit iure quas voluptatibus, vero voluptates dolorum a hic eos accusantium. Veniam modi dolor pariatur recusandae soluta distinctio reprehenderit laboriosam minus aliquam? lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed recusandae minus odio asperiores dolor possimus? Quam ipsa veritatis rem ipsum obcaecati. Maxime similique ullam culpa numquam cumque earum rerum animi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur adipisci soluta vitae consequatur quos aut, minus odit porro veritatis corporis inventore a debitis vel dolor, nihil harum aliquam cumque. Repellendus?</p>
+    <h1>Conteúdos dentro de iframe</h1>
     
-    <!-- Abaixo foi feito duas iframe, a primeira deixando o scrip rodar e a segunda (com o referrerpolicy="no-referrer" sandbox="sandbox") bloqueando o scrip -->
-    
-    <iframe src="pag005.html" frameborder="0"></iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illo, earum nostrum libero quibusdam perferendis cumque ipsum odit? Iusto eos natus minus in nemo est nulla optio officiis at quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sequi. Mollitia quas est tempore similique reiciendis repellat odit ratione nam expedita, atque culpa delectus blanditiis veritatis laboriosam ut asperiores nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique esse aut soluta voluptas, animi aliquam porro non impedit ratione in. Adipisci vitae deleniti consequuntur rem repellendus quod eveniet inventore nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic, aliquid adipisci eaque veniam qui! Similique recusandae praesentium maxime deleniti ab inventore ducimus molestias aspernatur corporis, nisi distinctio exercitationem facilis.</p>
+<hr>
+    <h2>Vídeos</h2>
 
-    <iframe id="segundo" src="pag005.html" frameborder="0" referrerpolicy="no-referrer" sandbox="sandbox"></iframe>
+    <div style="padding: 56.25% 0 0 0;position: relative;">
+        <iframe src="https://player.vimeo.com/video/265045525" style="position: absolute;top: 0;left:0;width: 100%;height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit iure quas voluptatibus, vero voluptates dolorum a hic eos accusantium. Veniam modi dolor pariatur recusandae soluta distinctio reprehenderit laboriosam minus aliquam? lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed recusandae minus odio asperiores dolor possimus? Quam ipsa veritatis rem ipsum obcaecati. Maxime similique ullam culpa numquam cumque earum rerum animi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur adipisci soluta vitae consequatur quos aut, minus odit porro veritatis corporis inventore a debitis vel dolor, nihil harum aliquam cumque. Repellendus?</p>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+<hr>    
+    <h2>Mapas do Google</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.019668108172!2d-46.49513052553513!3d-24.030371578988678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1f0a21b3003f%3A0xdd517ad4da92dfb4!2sSecretaria%20de%20Sa%C3%BAde%20P%C3%BAblica%20de%20Praia%20Grande!5e0!3m2!1spt-BR!2sbr!4v1679074848975!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<hr>
+    <h2>Mapas do Waze</h2>
+    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-24.030324&lon=-46.492532&ct=livemap" width="600" height="450" allowfullscreen></iframe>    
 </body>
 </html>
