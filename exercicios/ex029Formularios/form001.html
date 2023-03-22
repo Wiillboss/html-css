@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu formulário.</h1>
+    <form action="cadastro.php" method="post" autocomplete="off" >
+        <!-- O LABEL é como se fosse uma ETIQUETA para um campo, neste casso o primeiro está se referindo ou INPUT (nome).
+            O FOR dentro do LABEL é para ser preenchido com o NANME ou ID dentro do INPUT que ele faz referência, no caso abaixo o ID foi nomeado de com um (I) a frente somente para diferenciar o nome do ID para o NAME.-->
+        <p>
+            <label for="I_nome">Nome:</label>
+            <input type="text" name="nome" id="I_nome">
+        </p> 
+        <p>
+            <label for="I_snome">Sobrenome:</label>
+            <input type="text" name="snome" id="I_snome">
+        </p>
+        <!-- Todo INPUT precisa de uma INDETIFICAÇÃO, e isso ocorre tanto pelo NAME (onde é melhor usado em HTML e principalmente em PHP) e o ID (melhor usado em JavaScript - JS). OBS: O input do tipo SUBMIT não tem uma real necessidade por é somente um botão para subter, mas é possível tb que ele tenha um NAME ou ID -->
+        
+        <!-- O botão SUBMIT envia os dados para dentro do ACITON que neste caso é o CADASTRO.PHP -->
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>

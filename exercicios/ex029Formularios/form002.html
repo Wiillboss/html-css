@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 02</title>
+</head>
+<body>
+    <h1>Teste de formulário.</h1>
+    <form action="cadastro.php" method="post">
+        <!-- Required é quando se deseja que umm campo seja orbrigatóriamente preenchida.
+             Minlength e Maxlength são respectivamente a quantidade minima e máxima de caracteres.
+             Size é o tamanho do campo OBS: caso a quantidade máximo seja maior que a quantidade do     campo SIZE, isso acaba criando uma rolagem de forma horizontal.
+             Placeholder é o nome que fica escrito dentro da caixa de teste a que se refere.
+              -->
+        <p>
+            <label for="I_usu">Usuário</label>
+            <input type="text" name="usu" id="I_usu" required minlength="5" maxlength="15" size="15" placeholder="Nome do Usuário.">
+        </p>
+        <p>
+            <label for="I_sen">Senha</label>
+            <input type="password" name="sen" id="I_sen" required minlength="5">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
