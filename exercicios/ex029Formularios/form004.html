@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get">
+        <!--O autocomplete para telefone aceita qualquer valor, se colocar apenas um número ele aceita, para melhor uso dele, é necessário ter conhecimento sobre RegEx (são expressões regulares)
+            O PATTERN é uma expressão regulação, o codigo dentro configura o formato (quantidade) de número de telefone -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="I_nome">Nome</label>
+                <input type="text" name="nome" id="I_nome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="I_email">E-mail</label>
+                <input type="email" name="email" id="I_email" required>
+            </p>
+            <p>
+                <label for="I_telefone">Telefone</label>
+                <input type="tel" name="telefone" id="I_telefone" autocomplete="tel"
+                      pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx) xxxx-xxxx">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

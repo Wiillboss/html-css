@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <!-- Atenção, quando for fazer uso de RADIO, é importante deixer o mesmo NAME para todas as opção, caso contrario ele vai deixar a para opção dupla ou acima (caso tenha mais de duas opções de RADIO) no caso de clicar em mais de uma opção. -->
+            <!-- o CHECKED serve para deixar uma opção já selicionada de início. No RADIO é possível deixar o CHECKED em apenas uma única opção, visto que o RADIO é para escolher apenas uma única opção. -->
+            <!-- É importante deixar um VALUE dentro do INPUT do RADIO  -->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="I_sxmas" value="M" checked> <label for="I_sxmas">Masculino</label><br>
+            <input type="radio" name="sexo" id="I_sxfem" value="F"> <label for="I_sxfem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos.</legend>
+            <!-- Outra boa funcionalidade do LABEL é que quando clica em cima da palavra com o LABEL, automaticamente aciona o checkbox.
+                    Deixei NATAÇÂO e TENIS propositalmente sem LABEL para ver a diferença. -->
+            <input type="checkbox" name="fut" id="I_fut" checked> <label for="I_fut">Futebol</label>
+            <input type="checkbox" name="bas" id="I_bas"> <label for="I_bas">Basquete</label>
+            <input type="checkbox" name="nata" id="I_nata"> Natação
+            <input type="checkbox" name="tenis" id="I_tenis"> Tênis
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
