@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get">
+        <!-- O STEP que foi usado no input do NUMBER, serve para poder acionar número quebrados (com virgula)  
+                OBS: nesse caso usamos número quebrados de 0.5, caso necessite de números menores, é necessário colocar exatamente o que deseja.
+            O Min e Max usandos dentro do input do NUMBER é usado APENAS para números.
+            OBS: Caso desejar que os campos comecem com um valor especifico, basta usar VALUE dentro do INPUT Exemplo: Imagina que deseja ter o INPUT do número já comece do valor 5 e depois é só diminur ou aumentar o valor, é só usar VALUE="5", outro exemplo, desejo que o INPUT do mês já de início como outubro de 2023, basta usar VALUE="2023-10". Caso use VALUE="5" dentro do Number, automaticamente o placeholder deixa de ficar ativo. -->
+        <p>
+            <label for="I_nome">Nome</label>
+            <input type="text" name="nome" id="I_nome" required maxlength="30" placeholder="Nome Completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="I_media">Média</label>
+            <input type="number" name="media" id="I_media" required min="0" max="" placeholder="0 a 10"  step="0.5" >
+        </p>
+        <p>
+            <label for="I_mes">Períldo Letivo</label>
+            <input type="month" name="mes" id="I_mes">
+
+        </p>
+        <p>
+            <label for="I_dia">Dia da Prova</label>
+            <input type="date" name="dia" id="I_dia">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="submit" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
