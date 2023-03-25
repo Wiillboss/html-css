@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <!-- O INPUT do tipo RANGE ele mostra apenas uma barra, seus valores não ficam expostos automativamente,
+                    para poder mostrar os resultados foi primeiro criado um OUTPUT onde dentro tem um ID (I_val) de identificação, esse OUTPUT vai mostrar o resultado, em seguida foi criado um ONIPUT, dentro dele foi indicado que o ID do OUTPUT (I_val) vai sofrer alteração de acordo com a mudança do INPUT do tipo RANGE que carrega o valor do ID (I_num) 
+                OBS: Lembrando novamente que o OUTPUT só mostra o resultado, ele não o envia para nenhuma lugar. -->
+            <label for="I_num">Número: </label>
+            <input type="range" name="num" id="I_num" min="0" max="10" value="5"
+                oninput="I_val.innerHTML=Number(I_num.value)">
+            <output id="I_val">5</output>
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+
+</body>
+</html>
