@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="I_ano">Em que ano você nasceu? </label>
+            <input type="number" name="ano" id="I_ano" min="1900" max="2020" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="I_idade">Sua idade é: </label>
+            <output id="I_idade">0</output>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <script>
+        //Primeiro foi criado uma função com nome de calIdade
+        function calcIdade(){
+         //em seguida foi criado uma variavel (let) com nome de ATUAL, ela está recendo o ano atual   
+            let atual = new Date().getFullYear()
+         //em seguinda está pegando o ID (I_idade) do OUTPUT e subtraindo a variavel criada acima (ATUAL) com o número digitado dentro do INPUT do tipo NUMBER que carrega o ID (I_ano), o resultado desta substração está sendo mostrando dentro da função que está sendo carregada dentro do ONIPUT dentro do INPUT do tipo NUMBER   
+            I_idade.innerHTML = Number(atual) - Number(I_ano.value)
+        }
+    </script>
+</body>
+</html>
