@@ -1,0 +1,53 @@
+@charset "UTF-08";
+/* Versão Mobile Firts */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
+    /*Abaixo é para ele incluir a borda no calculo do tamanho*/
+    box-sizing: border-box;
+}
+
+html{
+    /* width: 100vw; */
+    height: 100vh;
+}
+
+body{
+    background: black url(../imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 90vw;
+
+    /* Abaixo centralizou o main */
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+/* Abaixo foi desligado as imagensm, apenas a to telefone que foi deixada */
+img#I_phone {display: block;}
+img#I_tablet {display: none;}
+img#I_impressora {display: none;}
+img#I_pc {display: none;}
+img#I_tv {display: none;}
+
