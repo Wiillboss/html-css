@@ -29,7 +29,7 @@
 /*Declarações retrato */
 @media screen and (orientation: portrait) {
     body{
-        background-image: url(../imagens/cev-landscape.jpg);
+        background-image: url(../estilos_index_B_003/cev-portrait.jpg);
         background-position: center bottom;
     }
     
@@ -37,7 +37,7 @@
 /*Declarações paisagem */
 @media screen and (orientation: landscape) {
     body{
-        background-image: url(../imagens/cev-portrait.jpg);
+        background-image: url(../estilos_index_B_003/cev-landscape.jpg);
         background-position: left bottom;
     }
 }
