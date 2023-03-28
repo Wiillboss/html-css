@@ -1,6 +1,54 @@
 @charset "UTF-08";
 /* Todas as demais mídias */
 
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px.
+Celular: de 600px até 768px.
+Tablet: 768px até 992px.
+Desktop: 992px até 1200px.
+Grandes telas: acima de 1200px.*/
+
+
+
+/*
+Abaixo foi feito uma configuração para telas pequenas e celular, entretanto como já foi feito um na folha de STYLE, esse abaixo pode ser comentado
+
+@media Screen and (max-width: 600px){
+
+}
+
+@media screen and(min-width: 600px) and (max-width: 768px){
+
+}
+
+*/
+
+/*Abaixo foi feito configuração para IMPRESSÂO  */
+
 @media print{
     
+}
+
+/* Abaixo foi feito configuração para TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    
+    img#I_phone {display: none;}
+    img#I_tablet {display: block;}
+    img#I_impressora {display: none;}
+    img#I_pc {display: none;}
+    img#I_tv {display: none;}
+}
+
+/* Abaixo foi feito configuração para DESKTOP */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+
+}
+
+/* Abaixo foi feito configuração para GRANDES TELAS */
+@media screen and (min-width: 1200px) {
+
 }
