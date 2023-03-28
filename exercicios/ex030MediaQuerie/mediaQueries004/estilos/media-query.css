@@ -25,6 +25,28 @@ Abaixo foi feito uma configuração para telas pequenas e celular, entretanto co
 
 /*Abaixo foi feito configuração para IMPRESSÂO  */
 @media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    main{
+        width: 90vw;
+        border: 2px solid black
+    }
+
+    main ::after{
+        content: 'Essa impressão foi feita através do site www.brasileirinhas.com';
+        text-decoration: overline;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
 
 }
 
@@ -43,10 +65,26 @@ Abaixo foi feito uma configuração para telas pequenas e celular, entretanto co
 
 /* Abaixo foi feito configuração para DESKTOP */
 @media screen and (min-width: 992px) and (max-width: 1200px){
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
 
+    img#I_phone {display: none;}
+    img#I_tablet {display: none;}
+    img#I_impressora {display: none;}
+    img#I_pc {display: block;}
+    img#I_tv {display: none;}
 }
 
 /* Abaixo foi feito configuração para GRANDES TELAS */
 @media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
 
+    img#I_phone {display: none;}
+    img#I_tablet {display: none;}
+    img#I_impressora {display: none;}
+    img#I_pc {display: none;}
+    img#I_tv {display: block;}
 }
