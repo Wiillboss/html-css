@@ -10,7 +10,6 @@ Desktop: 992px até 1200px.
 Grandes telas: acima de 1200px.*/
 
 
-
 /*
 Abaixo foi feito uma configuração para telas pequenas e celular, entretanto como já foi feito um na folha de STYLE, esse abaixo pode ser comentado
 
@@ -25,9 +24,8 @@ Abaixo foi feito uma configuração para telas pequenas e celular, entretanto co
 */
 
 /*Abaixo foi feito configuração para IMPRESSÂO  */
-
 @media print{
-    
+
 }
 
 /* Abaixo foi feito configuração para TABLET */
@@ -35,7 +33,7 @@ Abaixo foi feito uma configuração para telas pequenas e celular, entretanto co
     body{
         background-image: url(../imagens/back-tablet.jpg);
     }
-    
+
     img#I_phone {display: none;}
     img#I_tablet {display: block;}
     img#I_impressora {display: none;}
