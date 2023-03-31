@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Meida Query</title>
 </head>
 <body>
     <header>
         <h1>Meu Site</h1>
-        <menu>
+        <!-- A tag I é de ICONE -->
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itensMenu">
             <ul>
                 <li> <a href="#">Opção 1</a> </li>
                 <li> <a href="#">Opção 2</a> </li>
@@ -30,5 +33,20 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facere corrupti recusandae magni consectetur enim ullam sed sint architecto laborum veniam dolores fugiat nemo tenetur suscipit, at doloremque repellendus? Enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sapiente aliquam nihil suscipit nostrum nesciunt dicta beatae ratione officia. Tempore optio facilis quaerat repellat, iusto ipsam praesentium! Alias, ducimus earum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate quas necessitatibus enim quaerat itaque . Nemo, eos! Quo adipisci recusandae, ipsam, porro fugiat necessitatibus iste est perspiciatis eum sapiente, sit magnam quod voluptatem saepe a tenetur sint.</p>
         </article>
     </main>
+    <!--Com relação ao DISPLAY.
+            BLOCK é quando é VISÍVEL.
+            NONE é quando é INVISÌVEL.
+        O scrip abaixo indica que quando ativada a função clickMenu o IF sinaliza que: quando o ID(itensMenu) do MENU estiver igual a BLOCK (VISÍVEL), faça o ID(itensMenu) do MENU ficar NONE (INVISÌVEL), caso contrario deixe o ID(itensMenu) do MENU ficar BLOCK (VISÌVEL) -->
+    <script>
+        function clickMenu(){
+
+            if (itensMenu.style.display == 'block'){
+                itensMenu.style.display = 'none'
+            } else{
+                itensMenu.style.display = 'block'
+            }
+
+        }
+    </script>
 </body>
 </html>
