@@ -1,9 +1,25 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) {
+    /* Deixar o menu hamburguer invisível quando a tela estiver acima de 768px */
     i#burguer{
         display: none;
-        
+
     }
-    
+    /* Deixar o menu visível apenas quando a tela estiver acima de 768px */
+    menu{
+        display: block;
+    }
+    /* Deixar o menu em linha um ao lado do outro quando a tela estiver acima de 768px */
+    menu > ul > li{
+        display: inline-block;
+    }
+
+    /* Somente com os codigos acima ocorre um problema que deve ser resolvido com uma função no JS 
+        Foi criado um na pagina principal com o nome de mudouTamanho no BODY. */
+
+    /* Deixando o main com o tamanho máximo de 768px */
+    main{
+        width: 768px;
+    } 
 }

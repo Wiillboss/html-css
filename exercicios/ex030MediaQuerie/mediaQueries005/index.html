@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="estilo/outrasMidias.css">
     <title>Media Query</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <!-- A tag I é de ICONE -->
@@ -38,16 +38,24 @@
     <!--Com relação ao DISPLAY.
             BLOCK é quando é VISÍVEL.
             NONE é quando é INVISÌVEL.
-        O scrip abaixo indica que quando ativada a função clickMenu o IF sinaliza que: quando o ID(itensMenu) do MENU estiver igual a BLOCK (VISÍVEL), faça o ID(itensMenu) do MENU ficar NONE (INVISÌVEL), caso contrario deixe o ID(itensMenu) do MENU ficar BLOCK (VISÌVEL) -->
-    <script>
-        function clickMenu(){
+        O primeiro scrip abaixo indica que quando ativada a função mudouTamanho, o IF sinaliza que: quando a a LARGURA da tela for maior ou igual 768px, faça o ID(itensMenu) do MENU ficar "BLOCK" (VISÍVEL), caso contrario deixe o ID(itensMenu) do MENU ficar "NONE" (INVISÌVEL.
 
+        O segundo scrip abaixo indica que quando ativada a função clickMenu o IF sinaliza que: quando o ID(itensMenu) do MENU estiver igual a "BLOCK" (VISÍVEL), faça o ID(itensMenu) do MENU ficar "NONE" (INVISÌVEL), caso contrario deixe o ID(itensMenu) do MENU ficar "BLOCK" (VISÌVEL) -->
+    <script>
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                itensMenu.style.display = 'block'
+            } else{
+                itensMenu.style.display = 'none'
+            }   
+        }
+
+        function clickMenu(){
             if (itensMenu.style.display == 'block'){
                 itensMenu.style.display = 'none'
             } else{
                 itensMenu.style.display = 'block'
             }
-
         }
     </script>
 </body>
