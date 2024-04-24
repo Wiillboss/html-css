@@ -18,7 +18,7 @@
             border: 2px solid black;
             border-radius: 10px;
             background-color: lightgray;
-            /* As linhas acima apenas está criando o largura e altura da box, a primeira linha está deixando a borda solida da cor preta e a largura da linha de 2px, importante lembrar que quando ao se criar essas DIVS, elas são dispostas automaticamente na posição VERTICAL. A linha abaixo do DISPLAY é que está as deixando na posição HORIZONTAL. */
+            /* As linhas acima apenas está criando o largura e altura da box, em seguida a linha está deixando a borda solida da cor preta e a largura da linha de 2px, importante lembrar que quando ao se criar essas DIVS, elas são dispostas automaticamente na posição VERTICAL. A linha abaixo do DISPLAY é que está as deixando na posição HORIZONTAL. */
             display: inline-block;
         }
         /* Três formas distintas de configurar um fundo de DIV. */
@@ -34,19 +34,28 @@
             background-image: url(imagens/pattern001.png);
         }
 
+        p{  
+            background-color: white;
+            color: blue;
+               
+        } 
     </style>
 </head>
 <body>
 
     <div class="quadrado" id="q1">
-
+            
     </div>
+    
     <div class="quadrado" id="q2">
 
     </div>
     <div class="quadrado" id="q3">
 
     </div>   
+    <p>No primeiro quadrado (div) temos um fundo de cor tradicional. </p>
+    <p>No segundo temos um fundo de cor gradient linear da cor amarela para o vermelhor começando de cima para baixo.</p>
+    <p>No terceiro (assim como no plano de fundo da página)temos um fundo de cor vindo de uma imagem alocada no próprio servidor.</p>
 
 </body>
 </html>
