@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+            display: flex;
+        }
+
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            flex: auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <!--
+        *Com relação as direções de flexbox:
+            ** flex-direction: row: (horizontal da esquerda para direita - PRADÃO).
+            ** flex-direction: row-reverse: (horizontal da direita para esquerda)
+            ** flex-direction: column (vertical de cima para baixo - usado principalmente para celular)
+            ** flez-direction: column-reverse: (vertical de baixo para cima)
+        
+        *Com relação aos EIXIOS.
+            Quando de trata de ROW.
+            *Eixo principal: main-axis (esquerda para direita)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (cima para baixo)
+                Inicio no: cross-start
+                Fim no: cross-end
+
+            Quando de trata de ROW-REVERSE.
+            *Eixo principal: main-axis (DIREITA para ESQUERDA)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (cima para baixo)
+                Inicio no: cross-start
+                Fim no: cross-end
+
+            Quando de trata de COLUMN.
+            *Eixo principal: main-axis (CIMA para BAIXO)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (esquerda para direita)
+                Inicio no: cross-start
+                Fim no: cross-end
+                
+            Quando de trata de COLUMN-REVERSE.
+            *Eixo principal: main-axis (baixo para cima)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (esquerda para direita)
+                Inicio no: cross-start
+                Fim no: cross-end    
+    -->
+
+
+</body>
+</html>

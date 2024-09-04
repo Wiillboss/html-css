@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner_linha_tradicional{
+            background-color: lightsalmon;
+            display: flex; 
+            flex-direction: row;           
+        }
+
+        div.conteiner_linha_reversa{
+            background-color: rgb(255, 122, 248);
+            display: flex;
+            flex-direction: row-reverse;            
+        }
+
+        div.conteiner_coluna_tradicional{
+            background-color: rgb(122, 255, 122);
+            display: flex;
+            flex-direction: column;            
+        }
+
+        div.conteiner_coluna_reversa{
+            background-color: rgb(255, 122, 140);
+            display: flex;
+            flex-direction: column-reverse;            
+        }
+
+        div.item_R_Trad{
+            background-color: rgb(230, 173, 173);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.item_R_Rever{
+            background-color: rgb(173, 230, 181);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.item_C_Trad{
+            background-color: rgb(173, 193, 230);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.item_C_Rever{
+            background-color: rgb(230, 173, 216);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner_linha_tradicional">
+        <div class="item_R_Trad">A - em linha tradicional</div>
+        <div class="item_R_Trad">B - em linha tradicional</div>
+        <div class="item_R_Trad">C - em linha tradicional</div>
+        <div class="item_R_Trad">D - em linha tradicional</div>
+        <div class="item_R_Trad">E - em linha tradicional</div>
+        <div class="item_R_Trad">F - em linha tradicional</div>
+        <div class="item_R_Trad">G - em linha tradicional</div>
+    </div>
+    <br>
+    <div class="conteiner_linha_reversa">
+        <div class="item_R_Rever">A - em linha reversa</div>
+        <div class="item_R_Rever">B - em linha reversa</div>
+        <div class="item_R_Rever">C - em linha reversa</div>
+        <div class="item_R_Rever">D - em linha reversa</div>
+        <div class="item_R_Rever">E - em linha reversa</div>
+        <div class="item_R_Rever">F - em linha reversa</div>
+        <div class="item_R_Rever">G - em linha reversa</div>
+    </div>
+    <br>
+    <div class="conteiner_coluna_tradicional">
+        <div class="item_C_Trad">A - em coluna tradiconal</div>
+        <div class="item_C_Trad">B - em coluna tradiconal</div>
+        <div class="item_C_Trad">C - em coluna tradiconal</div>
+        <div class="item_C_Trad">D - em coluna tradiconal</div>
+        <div class="item_C_Trad">E - em coluna tradiconal</div>
+        <div class="item_C_Trad">F - em coluna tradiconal</div>
+        <div class="item_C_Trad">G - em coluna tradiconal</div>
+    </div>
+    <br>
+    <div class="conteiner_coluna_reversa">
+        <div class="item_C_Rever">A - em coluna reversa</div>
+        <div class="item_C_Rever">B - em coluna reversa</div>
+        <div class="item_C_Rever">C - em coluna reversa</div>
+        <div class="item_C_Rever">D - em coluna reversa</div>
+        <div class="item_C_Rever">E - em coluna reversa</div>
+        <div class="item_C_Rever">F - em coluna reversa</div>
+        <div class="item_C_Rever">G - em coluna reversa</div>
+    </div>
+
+    <!--
+        *Com relação as direções de flexbox:
+            ** flex-direction: row: (horizontal da esquerda para direita - PRADÃO).
+            ** flex-direction: row-reverse: (horizontal da direita para esquerda)
+            ** flex-direction: column (vertical de cima para baixo - usado principalmente para celular)
+            ** flez-direction: column-reverse: (vertical de baixo para cima)
+        
+        *Com relação aos EIXIOS.
+            Quando de trata de ROW.
+            *Eixo principal: main-axis (esquerda para direita)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (cima para baixo)
+                Inicio no: cross-start
+                Fim no: cross-end
+
+            Quando de trata de ROW-REVERSE.
+            *Eixo principal: main-axis (DIREITA para ESQUERDA)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (cima para baixo)
+                Inicio no: cross-start
+                Fim no: cross-end
+
+            Quando de trata de COLUMN.
+            *Eixo principal: main-axis (CIMA para BAIXO)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (esquerda para direita)
+                Inicio no: cross-start
+                Fim no: cross-end
+                
+            Quando de trata de COLUMN-REVERSE.
+            *Eixo principal: main-axis (baixo para cima)
+                Inicio no: main-start 
+                Fim no: main-end
+            *Eixo transversal: cross-axis (esquerda para direita)
+                Inicio no: cross-start
+                Fim no: cross-end    
+    -->
+
+
+</body>
+</html>
