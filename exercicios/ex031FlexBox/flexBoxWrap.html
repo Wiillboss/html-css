@@ -48,11 +48,11 @@
             background-color: rgb(255, 246, 122);
             display: flex;
             padding: 10px;
+            flex-flow: row-reverse wrap-reverse; /* está linha substitui as duas linhas abaixo - sempre seguir a ordem das declarações  */
             /*
             flex-direction: row-reverse; <- direção reversa da linha
             flex-wrap: wrap-reverse; <- mover o elemento para CIMA quando a direção do flex for em LINHA e REVERSO
             */
-            flex-flow: row wrap-reverse; /* está linha substitui as duas linhas acima - sempre seguir a ordem das declarações  */
         }
 
         div.item_Linha_Reversa{
@@ -60,6 +60,41 @@
             border: 1px solid black;
             text-align: center;
             padding: 5px;
+        }
+
+        div.conteiner_Linha_auto{
+            background-color: rgba(78, 243, 56, 0.596);
+            display: flex;
+            padding: 10px;
+            flex-flow: row wrap;
+        }
+
+        div.item_Linha_auto{
+            background-color: rgb(252, 248, 6);
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            flex: auto;
+            /* 
+                Usando o flex: auto em conjunto com o flex-flow: row wrap, ele quebra assim como os demais,
+                entretanto o(s) elemento(s) que é(são) quebrado(s) ocupam todo o espaço do box pai na linha em questão
+                e quando outro(s) elemento(s) seguem quebrando, vai se ocupando um ao lado do outro mas sempre ocupando todo espaço
+            */
+        }
+
+        div.conteiner_Linha_auto_reverso{
+            background-color: rgba(243, 56, 81, 0.596);
+            display: flex;
+            padding: 10px;
+            flex-flow: row-reverse wrap-reverse;
+        }
+
+        div.item_Linha_auto_reverso{
+            background-color: rgb(6, 252, 39);
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            flex: auto;
         }
 
     </style>
@@ -88,6 +123,22 @@
         <div class="item_Linha_Reversa">(C) Com flex WRAP - row reverse</div>
         <div class="item_Linha_Reversa">(D) Com flex WRAP - row reverse</div>
         <div class="item_Linha_Reversa">(E) Com flex WRAP - row reverse</div>
+    </div>
+    <br>
+    <div class="conteiner_Linha_auto">
+        <div class="item_Linha_auto">(A) Com flex WRAP - auto</div>
+        <div class="item_Linha_auto">(B) Com flex WRAP - auto</div>
+        <div class="item_Linha_auto">(C) Com flex WRAP - auto</div>
+        <div class="item_Linha_auto">(D) Com flex WRAP - auto</div>
+        <div class="item_Linha_auto">(E) Com flex WRAP - auto</div>
+    </div>
+    <br>
+    <div class="conteiner_Linha_auto_reverso">
+        <div class="item_Linha_auto_reverso">(A) fl. wr. Reverso - auto</div>
+        <div class="item_Linha_auto_reverso">(B) fl. wr. Reverso - auto</div>
+        <div class="item_Linha_auto_reverso">(C) fl. wr. Reverso - auto</div>
+        <div class="item_Linha_auto_reverso">(D) fl. wr. Reverso - auto</div>
+        <div class="item_Linha_auto_reverso">(E) fl. wr. Reverso - auto</div>
     </div>
 
 
