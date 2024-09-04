@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box - Wrap</title>
+
+    <style>
+        div.conteiner_normal{
+            background-color: rgb(153, 255, 122);
+            display: flex;
+            padding: 10px;
+            /* flex-wrap: wrap; */
+        }
+
+        div.item_normal{
+            background-color: rgb(230, 173, 218);
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+        div.conteiner_Linha_Tradicional{
+            background-color: rgb(206, 122, 255);
+            display: flex;
+            padding: 10px;
+            flex-wrap: wrap; /* mover o elemento para baixo quando a direção do flex for em LINHA*/
+            /* 
+            Quando usando FLEXBOX, ambos abaixo são padrões não precisando escrever
+            
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            WRAP serve para mover o último elemento quando a janela diminui a ponto de não mais poder ver o elemento.
+            NOWARP (vem por padrão) faz com que o último elemento não se mova            
+            */
+        }
+
+        div.item_Linha_Tradicional{
+            background-color: rgb(208, 230, 173);
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            /* flex: auto; <- não permite que tenha espaço em branco dentro do box PAI*/
+        }
+
+        div.conteiner_Linha_Reversa{
+            background-color: rgb(255, 246, 122);
+            display: flex;
+            padding: 10px;
+            /*
+            flex-direction: row-reverse; <- direção reversa da linha
+            flex-wrap: wrap-reverse; <- mover o elemento para CIMA quando a direção do flex for em LINHA e REVERSO
+            */
+            flex-flow: row wrap-reverse; /* está linha substitui as duas linhas acima - sempre seguir a ordem das declarações  */
+        }
+
+        div.item_Linha_Reversa{
+            background-color: rgb(230, 173, 182);
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="conteiner_normal">
+        <div class="item_normal">(A) Exemplo de linha sem flex WRAP - normal</div>
+        <div class="item_normal">(B) Exemplo de linda sem flex WRAP - normal</div>
+        <div class="item_normal">(C) Exemplo de linha sem flex WRAP - normal</div>
+        <div class="item_normal">(D) Exemplo de linha sem flex WRAP - normal</div>
+        <div class="item_normal">(E) Exemplo de linha sem flex WRAP - normal</div>
+    </div>
+    <br>
+    <div class="conteiner_Linha_Tradicional">
+        <div class="item_Linha_Tradicional">(A) Com flex WRAP - row</div>
+        <div class="item_Linha_Tradicional">(B) Com flex WRAP - row</div>
+        <div class="item_Linha_Tradicional">(C) Com flex WRAP - row</div>
+        <div class="item_Linha_Tradicional">(D) Com flex WRAP - row</div>
+        <div class="item_Linha_Tradicional">(E) Com flex WRAP - row</div>
+    </div>
+    <br>
+    <div class="conteiner_Linha_Reversa">
+        <div class="item_Linha_Reversa">(A) Com flex WRAP - row reverse</div>
+        <div class="item_Linha_Reversa">(B) Com flex WRAP - row reverse</div>
+        <div class="item_Linha_Reversa">(C) Com flex WRAP - row reverse</div>
+        <div class="item_Linha_Reversa">(D) Com flex WRAP - row reverse</div>
+        <div class="item_Linha_Reversa">(E) Com flex WRAP - row reverse</div>
+    </div>
+
+
+</body>
+</html>
