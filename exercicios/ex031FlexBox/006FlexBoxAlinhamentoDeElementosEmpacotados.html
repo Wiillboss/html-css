@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container0101{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-items: flex-end; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0102{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: flex-end; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0201{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-items: center; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0202{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: center; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0301{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-items: flex-start; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0302{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: flex-start; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0401{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: space-evenly;
+            height: 400px;
+        }
+        div.container0402{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: space-between; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+        div.container0501{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
+            align-content: space-around; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            height: 400px;
+        }
+
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            /* flex: auto; */
+            padding: 40px;
+        }
+
+        p{
+            text-align: center;
+            background-color: rgb(119, 209, 153);
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex-Flow: row wrap com align-items: flex-end</p>
+    <div class="container0101">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-content: flex-end</p>
+    <div class="container0102">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-items: center</p>
+    <div class="container0201">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-content: center</p>
+    <div class="container0202">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-items: flex-star</p>
+    <div class="container0301">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-content: flex-start</p>
+    <div class="container0302">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <p>Flex-Flow: row wrap com align-content: space-evenly</p>
+    <div class="container0401">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <p>Flex-Flow: row wrap com align-content: space-between</p>
+    <div class="container0402">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <p>Flex-Flow: row wrap com align-content: space-around</p>
+    <div class="container0501">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+</body>
+</html>
