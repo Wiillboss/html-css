@@ -9,14 +9,14 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
-            align-items: flex-end; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            align-items: flex-end; /*Alinha os itens no canto inferior esquerdo quando o alinhamento está em linha (row)  */
             height: 400px;
         }
         div.container0102{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row wrap; /* Deixa em linha e quebra quando diminui a janela */
-            align-content: flex-end; /*Alinha os itens no canto superior esquerdo quando o alinhamento está em linha (row)  */
+            align-content: flex-end; /*Alinha os itens no canto inferior esquerdo quando o alinhamento está em linha (row)  */
             height: 400px;
         }
         div.container0201{
@@ -80,13 +80,24 @@
         p{
             text-align: center;
             background-color: rgb(119, 209, 153);
-            border: 2px solid black;
             padding: 5px;
+            font-size: 1.5em; /*Controlando o tamanhando da fonte */
+            font-weight: bold; /*Deixando a fonte em NEGRITO */
+            border: 2px solid black;
+            /*Shorthand é uma combinação de mais de um atributo em um único comando, nesse exemplo TAMANHO, TIPO DE SUBLINHADO e COR*/
+        }
+
+        h1{
+            text-align: center;
+            background-color: rgba(214, 3, 3, 0.842);
+            color: white;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <p>Flex-Flow: row wrap com align-items: flex-end</p>
+    <h1>Atenção! Alterar o tamanho da janela do navegador para visualizar as diferenças.</h1>
+    <p> Flex-Flow: row wrap com align-items: flex-end</p>
     <div class="container0101">
         <div class="item">A</div>
         <div class="item">B</div>
