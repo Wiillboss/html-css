@@ -10,7 +10,8 @@
             background-color: rgb(153, 255, 122);
             display: flex;
             padding: 10px;
-            /* flex-wrap: wrap; */
+            flex-wrap: nowrap;
+            /* A div PAi por padrão é - flex-wrap: nowrap */
         }
 
         div.item_normal{
@@ -99,12 +100,64 @@
             flex: auto;
         }
 
+        p{
+            background-color: rgba(151, 117, 93, 0.582);
+            text-align: center;
+            padding: 5px;
+            font-size: x-large;
+        }
+
+        h1{
+            text-align: center;
+            background-color: chartreuse;
+            padding: 4px;
+        }
+
+        h2{
+            text-align: center;
+            background-color: yellow;
+            padding: 4px;
+        }
+
+        h3{
+            text-align: center;
+            background-color: aqua;
+            padding: 4px;
+        }
+
+        h4{
+            text-align: center;
+            background-color: rgb(20, 192, 192);
+            padding: 4px;
+        }
+
+        hr{
+            height: 5px;
+            background-color: black;
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
     </style>
 
 </head>
 <body>
-
+    <h1>Para DIV PAi - Flex-wrap: nowrap; Flex-wrap: wrap e seu Shorthand Flex-Flow</h1>
+    <h2>Para DIV FILHO - Flex: auto - apenas para os ultimos dois exemplos</h2>
+    <hr>
     
+    <p>Alguns conceitos a ser lembrado:
+       <br> ROW: Linha.
+       <br> COLUMN: Coluna.
+       <br>Main-axis: Eixo principal.
+       <br>Cross- axis: Eixo transvesal (direção oposta do Main-axis).
+       <br>Main-star e Main-end: Inicio e fim (respectivamente) do Main-axis (eixo principal).
+       <br>Cross-star e Cross-end: Inicio e fim (respectivamente) do Cross-axis (eixo transvesal).
+       <br>Display: flex - Em sua grande maioria, o container ( a DIV) PAI que recebe essa propriedade, dificilmente o container filho recebe.
+    </p>
+    <hr>
+
+    <h3>No exemplo abaixo temos: DIV PAI com - flex-wrap: nowrap; - essa propriedade é o padrão. </h3>
+    <h4>Flex-wrap: nowrap (DIV PAI) - indica que ao diminuir o tamanho da janela, os itens da DIV FILHO, não vai quebrar.</h4>
     <div class="conteiner_normal">
         <div class="item_normal">(A) Exemplo de linha sem flex WRAP - normal</div>
         <div class="item_normal">(B) Exemplo de linda sem flex WRAP - normal</div>
@@ -113,6 +166,11 @@
         <div class="item_normal">(E) Exemplo de linha sem flex WRAP - normal</div>
     </div>
     <br>
+    <hr>
+
+    <h3>No exemplo abaixo temos: DIV PAI com - flex-wrap: wrap; </h3>
+    <h4>Flex-wrap: wrap (DIV PAI) - indica que ao diminuir o tamanho da janela, os itens da DIV FILHO, vai quebrar no sentido do CROSS-AXIS (eixo transvesal) .</h4>
+    
     <div class="conteiner_Linha_Tradicional">
         <div class="item_Linha_Tradicional">(A) Com flex WRAP - row</div>
         <div class="item_Linha_Tradicional">(B) Com flex WRAP - row</div>
@@ -121,6 +179,14 @@
         <div class="item_Linha_Tradicional">(E) Com flex WRAP - row</div>
     </div>
     <br>
+    <hr>
+
+    <h3>No exemplo abaixo temos: DIV PAI com - flex-flow: row-reverse wrap-reverse; </h3>
+    <h3>Flex-flow: row-reverse wrap-reverse; - É um Shorthand para:
+        flex-direction: row-reverse e flex-wrap: wrap-reverse </h3>
+    <h4>Flex-flow: row-reverse wrap-reverse (DIV PAI): <br>
+         indica que os itens tem INÍCIO no final da linha e ao diminuir o tamanho da janela, os itens vai quebrar no sentido CONTRÁRIO do CROSS-AXIS.</h4>
+
     <div class="conteiner_Linha_Reversa">
         <div class="item_Linha_Reversa">(A) Com flex WRAP - row reverse</div>
         <div class="item_Linha_Reversa">(B) Com flex WRAP - row reverse</div>
@@ -129,6 +195,8 @@
         <div class="item_Linha_Reversa">(E) Com flex WRAP - row reverse</div>
     </div>
     <br>
+    <hr>
+
     <div class="conteiner_Linha_auto">
         <div class="item_Linha_auto">(A) Com flex WRAP - auto</div>
         <div class="item_Linha_auto">(B) Com flex WRAP - auto</div>
@@ -137,6 +205,8 @@
         <div class="item_Linha_auto">(E) Com flex WRAP - auto</div>
     </div>
     <br>
+    <hr>
+
     <div class="conteiner_Linha_auto_reverso">
         <div class="item_Linha_auto_reverso">(A) fl. wr. Reverso - auto</div>
         <div class="item_Linha_auto_reverso">(B) fl. wr. Reverso - auto</div>
