@@ -18,7 +18,8 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: flex-start; 
+            justify-content: flex-start;
+            height: 50px; 
         }
 
         div.item{
@@ -26,41 +27,47 @@
             border: 1px solid black;
             text-align: center;
             /* flex: auto; */
+            width: 50px;
         }
         
         div.conteiner_FLE_END{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: flex-end; 
+            justify-content: flex-end;
+            height: 50px; 
         }
 
         div.conteiner_center{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center; 
+            justify-content: center;
+            height: 50px; 
         }
 
         div.conteiner_S_BE{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-between; 
+            justify-content: space-between;
+            height: 50px; 
         }
 
         div.conteiner_S_AR{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-around; 
+            justify-content: space-around;
+            height: 50px; 
         }
 
         div.conteiner_S_EV{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-evenly; 
+            justify-content: space-evenly;
+            height: 50px; 
         }
         div.conteiner_A_I_S{
             background-color: lightsalmon;
@@ -94,11 +101,46 @@
             align-items: flex-end;
             height: 100px; 
         }
+        #priPara{
+            background-color: rgba(159, 159, 190, 0.685);
+            color: black;
+            font: bold;
+            font-size: large;
+            text-align: center;
+        }
+        #segPara{
+            background-color: rgba(0, 0, 0, 0.973);
+            color: white;
+            font: bold;
+            font-size: large;
+            text-align: center;
+        }
+        #terPara{
+            background-color: rgb(159, 159, 190);
+            color: black;
+            font: bold;
+            font-size: x-large;
+            text-align: center;
+            border: 1px solid black;
+        }
 
+        hr{
+            height: 10px;
+            background-color: black;
+            margin-bottom: 40px;
+        }
+
+        h1{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <p>Flex-Flow: row nowrap com Justify-Content: flex-star</p> <!-- Alinha os Todos os itens no inicio do MAIN-START -->
+        <h1>Os <strong>atributos</strong> estão sendo usando na <strong>DIV PAI</strong></h1>
+
+    <p id="priPara"><strong>Flex-Flow:</strong> row nowrap : Alinhamento em linha e sem quebrar o elemento ao diminuir a janela.</p>
+    <p id="segPara"><strong>Justify-Content:</strong> flex-star - Alinha (começando com o <strong>primeiro</strong>) os elementos no <strong>Main-start</strong> do <strong>Main-axis</strong>. </p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: flex-star</p> <!-- Alinha os Todos os itens no inicio do MAIN-START -->
     <div class="conteiner_FLE_STA">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -109,7 +151,11 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: flex-end</p> <!-- Alinha os Todos os itens no inicio do MAIN-END -->
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> flex-end - Alinha (começando com o <strong>último</strong>) os elementos no <strong>Main-end</strong> do <strong>Main-axis</strong>. </p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: flex-end</p> <!-- Alinha os Todos os itens no inicio do MAIN-END -->
     <div class="conteiner_FLE_END">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -120,7 +166,11 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: center</p> <!-- Alinha TODOS os itens no CENTRO -->
+    
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> center - Alinha os elementos no <strong>centro</strong> do <strong>Main-axis</strong> e deixa os espacços vazios no <strong>Main-start</strong> e <strong>Main-end</strong>. </p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: center</p> <!-- Alinha TODOS os itens no CENTRO -->
     <div class="conteiner_center">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -131,7 +181,11 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-between</p> <!-- Alinha o PRIMEIRO item no MAIN-STAR, o ULTIMO no MAINS-END, os demais ficam no CENTRO com o espaçamento IGUAL -->
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> space-between - Alinha o <strong>primeiro</strong> elemento no <strong>Main-start</strong>, o <strong>último</strong> no <strong>Main-end</strong> e os demais distribuídos no <strong>centro</strong> do  <strong>Main-axis</strong> . </p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-between</p> <!-- Alinha o PRIMEIRO item no MAIN-STAR, o ULTIMO no MAINS-END, os demais ficam no CENTRO com o espaçamento IGUAL -->
     <div class="conteiner_S_BE">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -142,7 +196,11 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-around</p> <!-- Calcula o total de itens no container, divide o container pelo total e centraliza dentro de cada divisão -->
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> space-around - Pega a <strong>quantidade total</strong> de elementos e <strong>divide</strong> a <i>DIV PAI</i> pelo <strong>total de elementos contabilizado</strong>, depois <strong>centraliza</strong> os elementos dentro da divisão feita.
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around</p> <!-- Calcula o total de itens no container, divide o container pelo total e centraliza dentro de cada divisão -->
     <div class="conteiner_S_AR">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -153,7 +211,11 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-evenly</p> <!-- Inseri espaços IGUAIS no INICIO, FIM e entre os elementos -->
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> space-evenly - Acrecenta <strong>espaçamento</strong> de <strong>forma igual</strong> entre todos os elementos, inclusive no <strong>Main-star</strong> e <strong>Main-end</strong> . </p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-evenly</p> <!-- Inseri espaços IGUAIS no INICIO, FIM e entre os elementos -->
     <div class="conteiner_S_EV">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -164,7 +226,7 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-around e align-items: stretch</p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: stretch</p>
     <div class="conteiner_A_I_S">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -175,7 +237,7 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-around e align-items: center</p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: center</p>
     <div class="conteiner_A_I_C">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -186,7 +248,7 @@
         <div class="item">G</div>
     </div>
     <br>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-start</p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-start</p>
     <div class="conteiner_A_I_FS">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -196,7 +258,7 @@
         <div class="item">F</div>
         <div class="item">G</div>
     </div>
-    <p>Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-end</p>
+    <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-end</p>
     <div class="conteiner_A_I_FE">
         <div class="item">A</div>
         <div class="item">B</div>
