@@ -73,8 +73,16 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-around;
-            align-items: stretch;
+            justify-content: space-around; 
+            align-items: stretch; /*aling-items - alinha no eixo transversal (cross axis) */
+            height: 100px; 
+        }
+        div.conteiner_A_I_S_semJC{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            /* justify-content: space-around;  */
+            align-items: stretch; /*aling-items - alinha no eixo transversal (cross axis) */
             height: 100px; 
         }
         div.conteiner_A_I_C{
@@ -82,6 +90,14 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            align-items: center;
+            height: 100px; 
+        }
+        div.conteiner_A_I_C_semJC{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            /* justify-content: space-around; */
             align-items: center;
             height: 100px; 
         }
@@ -93,11 +109,27 @@
             align-items: flex-start;
             height: 100px; 
         }
+        div.conteiner_A_I_FS_semJC{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            /* justify-content: space-around; */
+            align-items: flex-start;
+            height: 100px; 
+        }
         div.conteiner_A_I_FE{
             background-color: lightsalmon;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            align-items: flex-end;
+            height: 100px; 
+        }
+        div.conteiner_A_I_FE_semJC{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            /* justify-content: space-around; */
             align-items: flex-end;
             height: 100px; 
         }
@@ -126,20 +158,30 @@
 
         hr{
             height: 10px;
-            background-color: black;
+            background-color: green;
             margin-bottom: 40px;
         }
 
-        h1{
+        h1, h2{
             text-align: center;
+        }
+
+        body{
+            background-color: rgba(128, 128, 128, 0.219);
         }
     </style>
 </head>
 <body>
         <h1>Os <strong>atributos</strong> estão sendo usando na <strong>DIV PAI</strong></h1>
+        
+        <h2>Justify-Content - ele é baseado com a direção do <span style="color: blue">MAIN-AXIS</span>, <span style="color: blue;">MAIN START</span> e <span style="color: blue;">MAIN END</span>.</h2>
+        
+        <h2>Aling-items - ele é baseado com a direção do <span style="color: red;">CROSS-AXIS</span>, <span style="color: red;">CROSS START</span> e <span style="color: red;">CROSS END</span>.</h2>
 
-    <p id="priPara"><strong>Flex-Flow:</strong> row nowrap : Alinhamento em linha e sem quebrar o elemento ao diminuir a janela.</p>
-    <p id="segPara"><strong>Justify-Content:</strong> flex-star - Alinha (começando com o <strong>primeiro</strong>) os elementos no <strong>Main-start</strong> do <strong>Main-axis</strong>. </p>
+        <h2><strong>Flex-Flow:</strong> row nowrap : Alinhamento em linha e sem quebrar o elemento ao diminuir a janela.</h2>
+    
+        <p id="segPara"><strong>Justify-Content:</strong> flex-star - Alinha (começando com o <strong>primeiro</strong>) os elementos no <strong>Main-start</strong> do <strong>Main-axis</strong>. </p>
+
     <p id="terPara">Flex-Flow: row nowrap com Justify-Content: flex-star</p> <!-- Alinha os Todos os itens no inicio do MAIN-START -->
     <div class="conteiner_FLE_STA">
         <div class="item">A</div>
@@ -226,6 +268,13 @@
         <div class="item">G</div>
     </div>
     <br>
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> space-evenly - Acrecenta <strong>espaçamento</strong> de <strong>forma igual</strong> entre todos os elementos, inclusive no <strong>Main-star</strong> e <strong>Main-end</strong> . </p>
+    <p id="segPara"><strong>Aling-items:</strong> stretch - É a configuração padrão do aling-items. Ela alonga os itens iniciando no <strong>CROSS START</strong> até o <strong>CROSS END</strong>. </p>
+
+    
     <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: stretch</p>
     <div class="conteiner_A_I_S">
         <div class="item">A</div>
@@ -237,6 +286,29 @@
         <div class="item">G</div>
     </div>
     <br>
+
+    <hr>
+
+    
+    <p id="segPara"><strong>Aling-items:</strong> stretch. Ela alonga os itens iniciando no <strong>CROSS START</strong> até o <strong>CROSS END</strong>. </p>
+    
+    <p id="terPara">Flex-Flow: row nowrap com align-items: stretch</p>
+    <div class="conteiner_A_I_S_semJC">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+
+    <hr>
+
+    <p id="segPara"><strong>Justify-Content:</strong> space-evenly - Acrecenta <strong>espaçamento</strong> de <strong>forma igual</strong> entre todos os elementos, inclusive no <strong>Main-star</strong> e <strong>Main-end</strong> . </p>
+    <p id="segPara"><strong>Aling-items:</strong> center. Centraliza os itens <strong>CROSS START</strong> até o <strong>CROSS END</strong>. </p>
+
     <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: center</p>
     <div class="conteiner_A_I_C">
         <div class="item">A</div>
@@ -248,7 +320,30 @@
         <div class="item">G</div>
     </div>
     <br>
+
+    <hr>
+
+    <p id="segPara"><strong>Aling-items:</strong> center. Centraliza os itens  no <strong>CROSS-AXIS</strong>. </p>
+    <p id="terPara">Flex-Flow: row nowrap com align-items: center</p>
+    <div class="conteiner_A_I_C_semJC">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    
+    <hr>
+    
+    <p id="segPara"><strong>Justify-Content:</strong> space-evenly - Acrecenta <strong>espaçamento</strong> de <strong>forma igual</strong> entre todos os elementos, inclusive no <strong>Main-star</strong> e <strong>Main-end</strong> . </p>
+    
+    <p id="segPara"><strong>Aling-items:</strong> flex-start. Alinha os itens no <strong>CROSS-START</strong>. </p>
+    
     <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-start</p>
+    
     <div class="conteiner_A_I_FS">
         <div class="item">A</div>
         <div class="item">B</div>
@@ -258,8 +353,51 @@
         <div class="item">F</div>
         <div class="item">G</div>
     </div>
+    <br>
+    
+    <hr>
+
+    <p id="segPara"><strong>Aling-items:</strong> flex-start. Alinha os itens no <strong>CROSS-START</strong>. </p>
+    
+    <p id="terPara">Flex-Flow: row nowrap com align-items: flex-start</p>
+    
+    <div class="conteiner_A_I_FS_semJC">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    
+    <hr>
+    
+    <p id="segPara"><strong>Justify-Content:</strong> space-evenly - Acrecenta <strong>espaçamento</strong> de <strong>forma igual</strong> entre todos os elementos, inclusive no <strong>Main-star</strong> e <strong>Main-end</strong> . </p>
+    
+    <p id="segPara"><strong>Aling-items:</strong> flex-end. Alinha os itens no <strong>CROSS-END</strong>. </p>
+    
     <p id="terPara">Flex-Flow: row nowrap com Justify-Content: space-around e align-items: flex-end</p>
+    
     <div class="conteiner_A_I_FE">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    
+    <hr>
+
+    <p id="segPara"><strong>Aling-items:</strong> flex-end. Alinha os itens no <strong>CROSS-END</strong>. </p>
+    
+    <p id="terPara">Flex-Flow: row nowrap com align-items: flex-end</p>
+    
+    <div class="conteiner_A_I_FE_semJC">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
