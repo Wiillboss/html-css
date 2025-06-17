@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia dos Itens.</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#i1{
+            order: 7;    
+        }
+        div#i2{
+            order: 4;    
+        }
+        div#i3{
+            order: 5;    
+        }
+        div#i4{
+            order: 2;    
+        }
+        div#i5{
+            order: 6;    
+        }
+        div#i6{
+            order: 1;    
+        }
+        div#i7{
+            order: 3;    
+        }
+    </style>
+</head>
+<body>
+    <p>Usando ORDER (inline).</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item" style="order: -3;">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <p>Usando ORDER (CSS).</p>
+    <div class="conteiner">
+        <div class="item" id="i1">A - 1</div>
+        <div class="item" id="i2">B - 2</div>
+        <div class="item" id="i3">C - 3</div>
+        <div class="item" id="i4">D - 4</div>
+        <div class="item" id="i5">E - 5</div>
+        <div class="item" id="i6">F - 6</div>
+        <div class="item" id="i7">G - 7</div>
+    </div>
+    <br>
+    <fieldset>
+        <h2>Valores do <span style="color: blue;"><strong>align-self:</strong></span> </h2>
+        <h3><span style="color: red;">Auto</span>: Ele vai herdar a caracteristica de alinhamento vertical do seu PAI, seja ele ALING-CONTENT ou ALING-ITEMS.</h3>
+        <h3><span style="color: red;">Flex-start</span>: É o alinhamento próximo ao CROSS-START.</h3>
+        <h3><span style="color: red;">Flex-end:</span> É o alinhamento próximo ao CROSS-END.</h3>
+        <h3><span style="color: red;">Center:</span> Calcula o centro entre o CROSS-START e CROSS-END.</h3>
+        <h3><span style="color: red;">Stretch:</span> Alonga (estica) os itens para que ocupe o espaço inteirodo eixo transversal.</h3>
+        <h3><span style="color: purple;">ATENÇÂO:</span> As mudanças acima ocorre quando está modificado o CROSS-AXIS.</h3>
+    </fieldset>
+</body>
+</html>
