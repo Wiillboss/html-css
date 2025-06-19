@@ -16,7 +16,8 @@
             border: 1px solid black;
             text-align: center;
             flex-basis: 250px;
-            flex-shrink: 0; 
+            flex-shrink: 0;
+            flex-grow: 0; 
         }
 
         div.item_FS1{
@@ -24,6 +25,39 @@
             border: 1px solid black;
             text-align: center;
             flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div.item_FG{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-grow: 0;
+            flex-shrink: 1; 
+        }
+        div.item_FG1{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-grow: 1;
+            flex-shrink: 0; 
+        }
+        div.item_exemplo_FG0{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-grow: 0;
+            flex-shrink: 1; 
+        }
+        div.item_exemplo_FG1{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-grow: 1;
             flex-shrink: 1; 
         }
 
@@ -32,7 +66,7 @@
         }
 
         #titulo{
-            background-color: gray;
+            background-color: rgb(163, 162, 162);
             text-align: center;
         }
     </style>
@@ -43,22 +77,53 @@
     
     <p>Por padrão, o <span style="color: blue;">Flex-shrink</span> é 1 (UM) e o <span style="color: red;">Flex-grow</span> é 0 (ZERO).</p>
     <p>Para ambos o 1 (UM) significa <span style="color: blue;">SIM</span> e o 0 (ZERO) é <span style="color: red;">NÂO</span>.</p>
-    <p><span style="color: blue;">Flex-shrink</span> faz com que o elemento ENCOLHA (diminuir) seu tamanho quando manipulada a janela.</p>
-    <p><span style="color: red;">Flex-grow</span> faz com que o elemento CRESÇA (aumenta) seu tamanho quando manipulada a janela.</p>
+    <p><span style="color: blue;">Flex-shrink</span> faz com que o elemento ENCOLHA (diminuir)  ou NÂO seu tamanho quando manipulada a janela.</p>
+    <p><span style="color: red;">Flex-grow</span> faz com que o elemento CRESÇA (aumenta) ou NÂO seu tamanho quando manipulada a janela.</p>
     <br>
-    <p id="titulo">Usando flex-shrink: 0 -> Os elementos podem encolher quando manupulada a janela? NÂO.</p>
+
+    <h2>Para que seja visível as propriedades usadas nessa aula, é necessário que esteja usando o flex-flow: row <span  style="color: chocolate;">rowwrap</span> para que com as alterações da janela, o(s) elemento(s) não seja(m) quebrado(s) para nenhum lugar.</h2>
+    
+    <p id="titulo">Usando flex-<span style="color: blue;">shrink:</span> e flex-<span style="color: red;">grow:</span> com valor 0 (zero).</p>
+    <p id="titulo">A janela quando manipulada, os elementos <span style="color: purple;"><i>NÂO</i></span> podem <span style="color: red;">crescer</span> ou <span style="color: blue;">diminuir</span>.</p>
     <div class="conteiner">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
     </div>
     <br>
-    <p id="titulo">Usando flex-shrink: 1 -> Os elementos podem encolher quando manupulada a janela? SIM.</p>
+    <p id="titulo">Usando flex-<span style="color: blue;">shrink:</span> e flex-<span style="color: red;">grow:</span> com valor 1 (um).</p>
+    <p id="titulo">A janela quando manipulada, os elementos podem <span style="color: red;">crescer</span> ou <span style="color: blue;">diminuir</span>.</p>
     <div class="conteiner">
         <div class="item_FS1">A</div>
         <div class="item_FS1">B</div>
         <div class="item_FS1">C</div>
     </div>
+    <br>
+    <p id="titulo">Usando flex-<span style="color: blue;">shrink:</span>1 e flex-<span style="color: red;">grow:</span> 0 .</p>
+    <p id="titulo">A janela quando manipulada, os elementos podem <span style="color: blue;">diminuir</span> mas não podem <span style="color: red;">crescer</span>.</p>
+    <div class="conteiner">
+        <div class="item_FG">A</div>
+        <div class="item_FG">B</div>
+        <div class="item_FG">C</div>
+    </div>
+    <br>
+    <p id="titulo">Usando flex-<span style="color: blue;">shrink:</span>0 e flex-<span style="color: red;">grow:</span> 1 .</p>
+    <p id="titulo">A janela quando manipulada, os elementos podem <span style="color: red;">crescer</span>  mas não podem <span style="color: blue;">diminuir</span>.</p>
+    <div class="conteiner">
+        <div class="item_FG1">A</div>
+        <div class="item_FG1">B</div>
+        <div class="item_FG1">C</div>
+    </div>
+    <br>
+    <p id="titulo">Usando flex-<span style="color: blue;">shrink:</span>1 em todos elementos
+        e flex-<span style="color: red;">grow:</span> 0 nos elementos A e C e flex-<span style="color: red;">grow:</span> 1 no elemento B.</p>
+    <p id="titulo">A janela quando diminuida, todos elementos podem <span style="color: blue;">diminuir</span>, entretanto quando aumentada, apenas o elemento <span style="color: red;">B</span> vai <span style="color: red;">crescer</span>.</p>
+    <div class="conteiner">
+        <div class="item_exemplo_FG0">A</div>
+        <div class="item_exemplo_FG1">B</div>
+        <div class="item_exemplo_FG0">C</div>
+    </div>
+    <br>
     <!--
         *Com relação as direções de flexbox:
             ** flex-direction: row: (horizontal da esquerda para direita - PRADÃO).
